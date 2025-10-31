@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import { Button } from '@/components/ui/button'
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -25,6 +27,10 @@ const navigationItems = [
     label: 'Issues',
     href: '/issues',
   },
+  {
+    label: 'Donate',
+    href: '/donate',
+  },
 ]
 
 export default function Header() {
@@ -33,11 +39,11 @@ export default function Header() {
       <Logo className="w-auto h-36 mt-4 ml-4" />
 
       {/* desktop navigation */}
-      <NavigationMenu>
-        <NavigationMenuList className="bg-red-950">
+      <NavigationMenu className="bg-red-950">
+        <NavigationMenuList className="bg-red-950 uppercase [&>li:last-child]:bg-red-primary [&>li:last-child]:font-black">
           {navigationItems.map((item) => (
             <NavigationMenuItem key={item.href}>
-              <NavigationMenuLink asChild>
+              <NavigationMenuLink asChild className="px-4 text-xl">
                 <Link href={item.href}>{item.label}</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
