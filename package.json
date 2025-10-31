@@ -39,6 +39,7 @@
     "dotenv": "16.4.7",
     "graphql": "^16.8.1",
     "lucide-react": "^0.548.0",
+    "motion": "^12.23.24",
     "next": "15.4.4",
     "payload": "3.59.1",
     "postcss": "^8.5.6",
